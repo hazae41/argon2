@@ -29,7 +29,7 @@ export namespace Abstract {
 
     abstract [Symbol.dispose](): void
 
-    abstract deriveOrThrow(password: Memory, salt: Memory): void
+    abstract deriveOrThrow(password: Memory, salt: Memory): Memory
 
   }
 
