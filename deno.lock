@@ -10,7 +10,6 @@
     "npm:@hazae41/result-and-option@^2.0.10": "2.0.10",
     "npm:@hazae41/symbol-dispose-polyfill@^1.0.2": "1.0.2",
     "npm:@hazae41/tscousin@^1.0.28": "1.0.28",
-    "npm:@noble/hashes@^1.8.0": "1.8.0",
     "npm:@types/node@*": "24.2.0",
     "npm:typescript@^5.9.3": "5.9.3"
   },
@@ -51,9 +50,6 @@
       "integrity": "sha512-Wrg/66m0hLexrifpzJ5a/D7Jzb7FhLzBWrCFAgjZa+DIU8prA5rX4MwD5K34UZ6jsYBRZsYwNeVEYRqOIJHOEQ==",
       "bin": true
     },
-    "@noble/hashes@1.8.0": {
-      "integrity": "sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A=="
-    },
     "@types/node@24.2.0": {
       "integrity": "sha512-3xyG3pMCq3oYCNg7/ZP+E1ooTaGB4cG8JWRsqqOYQdbWNY4zbaV0Ennrd7stjiJEFZCaybcIgpTjJWHRfBSIDw==",
       "dependencies": [
@@ -83,7 +79,6 @@
         "npm:@hazae41/result-and-option@^2.0.10",
         "npm:@hazae41/symbol-dispose-polyfill@^1.0.2",
         "npm:@hazae41/tscousin@^1.0.28",
-        "npm:@noble/hashes@^1.8.0",
         "npm:typescript@^5.9.3"
       ]
     }
