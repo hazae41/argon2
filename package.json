@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@hazae41/argon2",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Argon2 adapter for WebAssembly and JS implementations",
   "repository": "github:hazae41/argon2",
   "author": "hazae41",
