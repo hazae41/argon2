@@ -28,7 +28,7 @@ npm i @hazae41/argon2.wasm
 
 ```typescript
 import { Argon2 } from "@hazae41/argon2"
-import { Argon2Wasm } from "@hazae41/argon2.wasm"
+import { Argon2Wasm } from "@hazae41/argon2-wasm"
 
 await Argon2Wasm.initBundled()
 
