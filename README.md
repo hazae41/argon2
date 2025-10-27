@@ -3,10 +3,14 @@
 Argon2 adapter for WebAssembly and JS implementations
 
 ```bash
-npm i @hazae41/argon2
+npm install @hazae41/argon2
 ```
 
-[**Node Package 📦**](https://www.npmjs.com/package/@hazae41/argon2)
+```bash
+deno install jsr:@hazae41/argon2
+```
+
+[**📦 NPM**](https://www.npmjs.com/package/@hazae41/argon2) • [**📦 JSR**](https://jsr.io/@hazae41/argon2)
 
 ## Features
 
