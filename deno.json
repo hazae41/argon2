@@ -1,6 +1,6 @@
 {
   "name": "@hazae41/argon2",
-  "version": "3.0.1",
+  "version": "2.0.0",
   "imports": {
     "@/": "./src/",
     "@hazae41/argon2-wasm": "jsr:@hazae41/argon2-wasm@^1.0.6",
