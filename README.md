@@ -23,7 +23,7 @@ deno install jsr:@hazae41/argon2
 ### WebAssembly
 
 ```bash
-npm i @hazae41/argon2.wasm
+npm i @hazae41/argon2-wasm
 ```
 
 ```typescript
