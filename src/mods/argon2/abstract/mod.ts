@@ -26,7 +26,7 @@ export namespace Abstract {
 
   export abstract class Argon2Deriver {
 
-    abstract deriveOrThrow(password: Memory, salt: Memory): Memory
+    abstract deriveOrThrow(password: MemoryLike, salt: MemoryLike): Memory
 
   }
 
