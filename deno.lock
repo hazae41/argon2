@@ -8,7 +8,6 @@
     "npm:@hazae41/argon2-wasm@^1.0.6": "1.0.8_@hazae41+memory-wasm@1.0.46",
     "npm:@hazae41/phobos@^2.0.13": "2.0.16",
     "npm:@hazae41/result-and-option@^2.0.10": "2.0.10",
-    "npm:@hazae41/symbol-dispose-polyfill@^1.0.2": "1.0.2",
     "npm:@hazae41/tscousin@^1.0.28": "1.0.28",
     "npm:@types/node@*": "24.2.0",
     "npm:typescript@^5.9.3": "5.9.3"
@@ -43,9 +42,6 @@
     "@hazae41/result-and-option@2.0.10": {
       "integrity": "sha512-Msf15N4OBCSsAxdonghJmbwERQqgc0ZWVPi1yE+oI8maC1FBFacQrym+xNF+lnXXgaTheLAUnx3B8yCA5Z1EWw=="
     },
-    "@hazae41/symbol-dispose-polyfill@1.0.2": {
-      "integrity": "sha512-Jjlfw/K3A4Abl2QijyaAq4Xx+FN8Xu6132vqGUnNj3pFzPg+bGq6pytalvTEzU0o/VEOn7/hDnJ5v1NlCjUXkQ=="
-    },
     "@hazae41/tscousin@1.0.28": {
       "integrity": "sha512-Wrg/66m0hLexrifpzJ5a/D7Jzb7FhLzBWrCFAgjZa+DIU8prA5rX4MwD5K34UZ6jsYBRZsYwNeVEYRqOIJHOEQ==",
       "bin": true
@@ -69,7 +65,6 @@
       "jsr:@hazae41/argon2-wasm@^1.0.6",
       "jsr:@hazae41/phobos@^2.0.13",
       "jsr:@hazae41/result-and-option@^2.0.10",
-      "jsr:@hazae41/symbol-dispose-polyfill@^1.0.2",
       "jsr:@hazae41/tscousin@^1.0.28"
     ],
     "packageJson": {
@@ -77,7 +72,6 @@
         "npm:@hazae41/argon2-wasm@^1.0.6",
         "npm:@hazae41/phobos@^2.0.13",
         "npm:@hazae41/result-and-option@^2.0.10",
-        "npm:@hazae41/symbol-dispose-polyfill@^1.0.2",
         "npm:@hazae41/tscousin@^1.0.28",
         "npm:typescript@^5.9.3"
       ]
