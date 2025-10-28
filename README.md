@@ -27,10 +27,10 @@ npm i @hazae41/argon2-wasm
 ```
 
 ```typescript
-import { Argon2 } from "@hazae41/argon2"
-import { Argon2Wasm } from "@hazae41/argon2-wasm"
+import { argon2 } from "@hazae41/argon2"
+import { argon2Wasm } from "@hazae41/argon2-wasm"
 
-await Argon2Wasm.initBundled()
+await argon2Wasm.load() // or argon2Wasm.loadSync()
 
-Argon2.set(Argon2.fromWasm(Argon2Wasm))
+argon2.set(argon2.fromWasm(argon2Wasm))
 ```
