@@ -6,7 +6,9 @@ export namespace Abstract {
     | Memory<N>
     | Memory<N>["bytes"]
 
-  export abstract class Memory<N extends number = number> {
+  export abstract class Memory<N extends number = number> implements Disposable {
+
+    abstract [Symbol.dispose](): void
 
     abstract readonly inner: unknown
 
@@ -24,9 +26,11 @@ export namespace Abstract {
 
   }
 
-  export abstract class Argon2Deriver {
+  export abstract class Argon2Deriver implements Disposable {
 
-    abstract deriveOrThrow(password: MemoryLike, salt: MemoryLike): Memory
+    abstract [Symbol.dispose](): void
+
+    abstract deriveOrThrow(password: Memory, salt: Memory): Memory
 
   }
 

@@ -14,18 +14,21 @@ export function fromWasm(wasm: typeof argon2Wasm): Adapter {
       super()
     }
 
+    [Symbol.dispose]() {
+      this.inner[Symbol.dispose]()
+    }
+
     static fromOrThrow<N extends number = number>(memory: Abstract.MemoryLike<N>): Memory<N> {
+      if (memory instanceof Memory)
+        return memory
+
       if (memory instanceof Uint8Array)
         return new Memory<N>(new wasm.Memory(memory))
 
-      if (memory instanceof Memory)
-        return memory
       if (memory.inner instanceof wasm.Memory)
-        return new Memory(memory.inner)
+        return new Memory<N>(memory.inner)
 
-      const inner = new wasm.Memory(memory.bytes)
-
-      return new Memory<N>(inner)
+      return new Memory<N>(new wasm.Memory(memory.bytes))
     }
 
     get bytes() {
@@ -42,12 +45,20 @@ export function fromWasm(wasm: typeof argon2Wasm): Adapter {
       super()
     }
 
+    [Symbol.dispose]() {
+      this.inner[Symbol.dispose]()
+    }
+
     static createOrThrow(algorithm: string, version: number, memory: number, iterations: number, parallelism: number) {
       return new Argon2Deriver(new wasm.Argon2Deriver(algorithm, version, memory, iterations, parallelism))
     }
 
-    deriveOrThrow(password: Abstract.MemoryLike, salt: Abstract.MemoryLike) {
-      return new Memory(this.inner.derive(Memory.fromOrThrow(password).inner, Memory.fromOrThrow(salt).inner))
+    deriveOrThrow(password: Memory, salt: Memory) {
+      if (password instanceof Memory === false)
+        throw new Error()
+      if (salt instanceof Memory === false)
+        throw new Error()
+      return new Memory(this.inner.derive(password.inner, salt.inner))
     }
 
   }
