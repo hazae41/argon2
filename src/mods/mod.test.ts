@@ -4,7 +4,7 @@ import { argon2 } from "@hazae41/argon2";
 import { argon2Wasm } from "@hazae41/argon2-wasm";
 
 test("argon", async () => {
-  await argon2Wasm.initBundled()
+  await argon2Wasm.load()
 
   const { Memory, Argon2Deriver } = argon2.fromWasm(argon2Wasm)
 
