@@ -1,20 +1,20 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@hazae41/argon2-wasm@^1.0.6": "1.0.8",
-    "jsr:@hazae41/phobos@^2.0.13": "2.0.16",
+    "jsr:@hazae41/argon2-wasm@2": "2.0.0",
+    "jsr:@hazae41/phobos@^2.0.16": "2.0.16",
     "jsr:@hazae41/result-and-option@^2.0.10": "2.0.10",
     "jsr:@hazae41/tscousin@^1.0.28": "1.0.28",
-    "npm:@hazae41/argon2-wasm@^1.0.6": "1.0.8_@hazae41+memory-wasm@1.0.46",
-    "npm:@hazae41/phobos@^2.0.13": "2.0.16",
+    "npm:@hazae41/argon2-wasm@2": "2.0.0_@hazae41+memory-wasm@1.0.46",
+    "npm:@hazae41/phobos@^2.0.16": "2.0.16",
     "npm:@hazae41/result-and-option@^2.0.10": "2.0.10",
     "npm:@hazae41/tscousin@^1.0.28": "1.0.28",
     "npm:@types/node@*": "24.2.0",
     "npm:typescript@^5.9.3": "5.9.3"
   },
   "jsr": {
-    "@hazae41/argon2-wasm@1.0.8": {
-      "integrity": "276ec406f6f171c176f6445508980f2a650ff4aac65661c047b1ac5811967c83"
+    "@hazae41/argon2-wasm@2.0.0": {
+      "integrity": "6c10de0df1dcd5c6abb02fa3e0f135e33ab14db8807ffd7ec6b33b2398b349b5"
     },
     "@hazae41/phobos@2.0.16": {
       "integrity": "1b4ed1a675cfbf502d3fd5a57108eedad3bff2b43238f9fd1884ea15c762a4fc"
@@ -27,8 +27,8 @@
     }
   },
   "npm": {
-    "@hazae41/argon2-wasm@1.0.8_@hazae41+memory-wasm@1.0.46": {
-      "integrity": "sha512-xsidGzpPcppY+xmCi7X6zQgC+rCun0RFNf8xi/sQnwt4T6Hpxn/0yzR8w2JiJgK3IteVbYlP13H4q00CYOAlCQ==",
+    "@hazae41/argon2-wasm@2.0.0_@hazae41+memory-wasm@1.0.46": {
+      "integrity": "sha512-QZt/tpml+voZgpYR/rT70F2sEOXRLJEGMdGs841jObH1TGLfqrQfmtNQO0JeUAE7qLy4bERbetcFpYx9YOo26w==",
       "dependencies": [
         "@hazae41/memory-wasm"
       ]
@@ -62,15 +62,15 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@hazae41/argon2-wasm@^1.0.6",
-      "jsr:@hazae41/phobos@^2.0.13",
+      "jsr:@hazae41/argon2-wasm@2",
+      "jsr:@hazae41/phobos@^2.0.16",
       "jsr:@hazae41/result-and-option@^2.0.10",
       "jsr:@hazae41/tscousin@^1.0.28"
     ],
     "packageJson": {
       "dependencies": [
-        "npm:@hazae41/argon2-wasm@^1.0.6",
-        "npm:@hazae41/phobos@^2.0.13",
+        "npm:@hazae41/argon2-wasm@2",
+        "npm:@hazae41/phobos@^2.0.16",
         "npm:@hazae41/result-and-option@^2.0.10",
         "npm:@hazae41/tscousin@^1.0.28",
         "npm:typescript@^5.9.3"
