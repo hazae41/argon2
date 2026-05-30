@@ -1,18 +1,16 @@
-import type { Lengthed } from "@/libs/lengthed/mod.ts";
+// deno-lint-ignore-file no-namespace
 
 export namespace Abstract {
 
-  export type MemoryLike<N extends number = number> =
-    | Memory<N>
-    | Memory<N>["bytes"]
+  export type MemoryLike = Memory | Uint8Array
 
-  export abstract class Memory<N extends number = number> implements Disposable {
+  export abstract class Memory implements Disposable {
 
     abstract [Symbol.dispose](): void
 
     abstract readonly inner: unknown
 
-    abstract readonly bytes: Uint8Array & Lengthed<N>
+    abstract readonly bytes: Uint8Array
 
   }
 
@@ -20,7 +18,7 @@ export namespace Abstract {
 
     export interface Static {
 
-      fromOrThrow<N extends number>(memory: MemoryLike<N>): Memory<N>
+      fromOrThrow(memory: MemoryLike): Memory
 
     }
 

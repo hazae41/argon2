@@ -1,14 +1,12 @@
 {
   "type": "module",
-  "name": "@hazae41/argon2",
-  "version": "2.0.5",
-  "description": "Argon2 adapter for WebAssembly and JS implementations",
-  "repository": "github:hazae41/argon2",
+  "name": "@hazae41/chacha20poly1305",
+  "version": "2.0.4",
+  "description": "ChaCha20Poly1305 adapter for WebAssembly and JS implementations",
+  "repository": "github:hazae41/chacha20poly1305",
   "author": "hazae41",
   "scripts": {
     "examine": "deno lint ./src && deno check ./src && deno test ./src",
-    "version": "deno -RW ./x.vsync.ts && git add deno.json",
-    "prepare": "deno -RW ./x.dsync.ts && deno install",
     "prepack": "rm -rf ./out && tsc && tscousin"
   },
   "files": [
@@ -24,7 +22,7 @@
     "@hazae41/argon2-wasm": "^2.0.0",
     "@hazae41/phobos": "^2.0.16",
     "@hazae41/tscousin": "^1.0.28",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   },
   "keywords": [
     "argon2",

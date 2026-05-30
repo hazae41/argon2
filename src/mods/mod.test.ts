@@ -1,12 +1,12 @@
 import { test } from "@hazae41/phobos";
 
-import { argon2 } from "@hazae41/argon2";
 import { argon2Wasm } from "@hazae41/argon2-wasm";
+import { fromWasm } from "./mod.ts";
 
 test("argon", async () => {
   await argon2Wasm.load()
 
-  const { Memory, Argon2Deriver } = argon2.fromWasm(argon2Wasm)
+  const { Memory, Argon2Deriver } = fromWasm(argon2Wasm)
 
   const pass = Memory.fromOrThrow(crypto.getRandomValues(new Uint8Array(256)))
   const salt = Memory.fromOrThrow(crypto.getRandomValues(new Uint8Array(32)))
