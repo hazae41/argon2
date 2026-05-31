@@ -4,10 +4,23 @@ await argon2Wasm.load()
 
 export class Deriver {
 
+  /**
+   * Do not use
+   * @param inner 
+   */
   constructor(
     readonly inner: argon2Wasm.Argon2Deriver
   ) { }
 
+  /**
+   * Create a new deriver with the specified parameters
+   * @param algorithm 
+   * @param version 
+   * @param memory 
+   * @param iterations 
+   * @param parallelism 
+   * @returns 
+   */
   static create(algorithm: string, version: number, memory: number, iterations: number, parallelism: number): Deriver {
     const { Argon2Deriver } = argon2Wasm
 
@@ -16,6 +29,12 @@ export class Deriver {
     return new Deriver(inner)
   }
 
+  /**
+   * Derive a key from the given password and salt
+   * @param password 
+   * @param salt 
+   * @returns 
+   */
   derive(password: Uint8Array, salt: Uint8Array): Uint8Array<ArrayBuffer> {
     const { Memory } = argon2Wasm
 
