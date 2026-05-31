@@ -8,7 +8,7 @@ export class Deriver {
     readonly inner: argon2Wasm.Argon2Deriver
   ) { }
 
-  static create(algorithm: string, version: number, memory: number, iterations: number, parallelism: number) {
+  static create(algorithm: string, version: number, memory: number, iterations: number, parallelism: number): Deriver {
     const { Argon2Deriver } = argon2Wasm
 
     const inner = new Argon2Deriver(algorithm, version, memory, iterations, parallelism)
@@ -16,7 +16,7 @@ export class Deriver {
     return new Deriver(inner)
   }
 
-  derive(password: Uint8Array, salt: Uint8Array) {
+  derive(password: Uint8Array, salt: Uint8Array): Uint8Array<ArrayBuffer> {
     const { Memory } = argon2Wasm
 
     const result = this.inner.derive(new Memory(password), new Memory(salt))
