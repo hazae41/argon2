@@ -1,6 +1,6 @@
 # Argon2
 
-Argon2 adapter for WebAssembly and JS implementations
+Argon2 for the web
 
 ```bash
 npm install @hazae41/argon2
