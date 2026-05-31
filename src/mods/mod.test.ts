@@ -1,18 +1,12 @@
 import { test } from "@hazae41/phobos";
+import { argon2 } from "../mod.ts";
 
-import { argon2Wasm } from "@hazae41/argon2-wasm";
-import { fromWasm } from "./mod.ts";
+test("argon", () => {
+  const pass = crypto.getRandomValues(new Uint8Array(256))
+  const salt = crypto.getRandomValues(new Uint8Array(32))
 
-test("argon", async () => {
-  await argon2Wasm.load()
+  const deriver = argon2.Deriver.create("argon2d", 19, 16384, 12, 2)
+  const derived = deriver.derive(pass, salt)
 
-  const { Memory, Argon2Deriver } = fromWasm(argon2Wasm)
-
-  const pass = Memory.fromOrThrow(crypto.getRandomValues(new Uint8Array(256)))
-  const salt = Memory.fromOrThrow(crypto.getRandomValues(new Uint8Array(32)))
-
-  const deriver = Argon2Deriver.createOrThrow("argon2d", 19, 16384, 12, 2)
-  const derived = deriver.deriveOrThrow(pass, salt)
-
-  console.log(derived.bytes)
+  console.log(derived)
 })
