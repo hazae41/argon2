@@ -33,6 +33,6 @@
   ],
   "dependencies": {
     "@hazae41/result-and-option": "^2.0.10",
-    "@hazae41/argon2-wasm": "^2.0.0"
+    "@hazae41/argon2-wasm": "^2.0.2"
   }
 }
